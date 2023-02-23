@@ -124,6 +124,11 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
 // CODE HERE 
 
+function each(arrOfNames, callback) {
+  for (let i = 0; i < arrOfNames.length; i++) {
+    callback(arrOfNames[i], i)
+  }
+}
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -134,8 +139,19 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
 // CODE HERE
 
+/*
+//the non-anon way of doing it:
+let aCallBack = (item, index) => {
+  console.log(`The item at index ${index} is ${item}`)
+}
 
+ each(names, aCallBack)
+ */
 
+// The anon way of doing it:
+each(names, (item, index)) => {
+  console.log(`The item at index ${index} is ${item}`)
+}
 
 
 ////////// CHALLENGES //////////
